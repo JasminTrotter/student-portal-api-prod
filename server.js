@@ -4,9 +4,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const passport = require('passport');
-//const { STRIPE_SECRET_KEY } = require('./config');
-// const stripe = require("stripe")(STRIPE_SECRET_KEY);
-const stripe = require("stripe")("sk_test_mV42WjXHzUOsWnairY9H7tfC");
+const { STRIPE_SECRET_KEY } = require('./config');
+const stripe = require("stripe")(STRIPE_SECRET_KEY);
+//const stripe = require("stripe")("sk_test_mV42WjXHzUOsWnairY9H7tfC");
 
 // Here we use destructuring assignment with renaming so the two variables
 // called router (from ./users and ./auth) have different names
